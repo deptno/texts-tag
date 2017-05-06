@@ -1,0 +1,18 @@
+{
+  "name": "texts-tag",
+  "version": "1.0.0",
+  "main": "bundle/text-translator.js",
+  "author": "deptno@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.0"
+  },
+  "dependencies": {
+    "@types/isomorphic-fetch": "^0.0.34",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
