@@ -13,7 +13,18 @@ import * as fetch from 'isomorphic-fetch';
             elements.forEach(element => {
                 const id = element.getAttribute(('data-text-id'));
                 const text = json[id];
-                element.textContent = text;
+
+                if (element.hasChildNodes()) {
+                    let node = element.firstChild;
+                    do {
+                        if (node.nodeType === document.TEXT_NODE) {
+                            node.textContent = text;
+                            break;
+                        }
+                    } while (node = node.nextSibling);
+                } else {
+                    element.textContent = text;
+                }
             });
         } catch(ex) { }
     }
