@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>texts-translator</title>
+    <style>
+        footer {
+            text-align: center;
+            background-color: #999;
+            height: 30px;
+            padding-top: 5px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 <h1>texts-translator</h1>
@@ -35,9 +44,29 @@
         </li>
         <li>
             <a href="https://github.com/deptno/texts-fe">https://github.com/deptno/texts-fe</a>
-            deployed version -><mark><a href="https://texts.surge.sh">https://texts.surge.sh</a></mark>
+            deployed version ->
+            <mark><a href="https://texts.surge.sh">https://texts.surge.sh</a></mark>
         </li>
     </ul>
 </article>
+<hr/>
+<article>
+    <h2>example</h2>
+    <h3 data-text-id="TEXTS_TR_TITLE">
+        loading...
+        <small data-text-id="TEXTS_URL"></small>
+    </h3>
+    <span data-text-id="TEXTS_TR_AUTHOR_EMAIL"/>
+    <br/>
+    <span data-text-id="TEXTS_TR_DESCRIPTION"/>
+</article>
+<footer className="App-footer">
+    author: <a href="mailto:deptno@gmail.com">deptno@gmail.com</a>
+    (<a href="http://blog.bglee.me" target="_blank">bglee.me</a>)
+</footer>
+<script>
+    window.TEXTS_DATA_URL = 'https://1r8n4u8sqc.execute-api.ap-northeast-2.amazonaws.com/dev/texts/i18n';
+</script>
+<script src="//texts-translator.surge.sh/texts-translator.js"></script>
 </body>
 </html>
