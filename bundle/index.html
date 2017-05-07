@@ -16,19 +16,19 @@
             margin-top: 20px;
         }
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/darcula.min.css">
 
     <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/dracula.css">
 </head>
-<body>
-<div class="container">
-    <h1>texts-translator</h1>
-    <br/>
-    <article>
-        <h2>usage</h2>
-        add code below to body
-        <pre>
+<body class="container-fluid">
+<h1>texts-translator</h1>
+<br/>
+<article>
+    <h2>usage</h2>
+    add code below to body
+    <pre>
         <code class="html">
             &lt;script&gt;
                 // data.fetching url
@@ -37,25 +37,25 @@
             &lt;script src="//texts-translator.surge.sh/texts-translator.js" defer&gt;&lt;/script&gt;
         </code>
     </pre>
-    </article>
-    <article>
-        <h2>ref</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/deptno/serverless-texts">https://github.com/deptno/serverless-texts</a>
-            </li>
-            <li>
-                <a href="https://github.com/deptno/texts-fe">https://github.com/deptno/texts-fe</a>
-                deployed version ->
-                <mark><a href="https://texts.surge.sh">https://texts.surge.sh</a></mark>
-            </li>
-        </ul>
-    </article>
+</article>
+<article>
+    <h2>ref</h2>
+    <ul>
+        <li>
+            <a href="https://github.com/deptno/serverless-texts">https://github.com/deptno/serverless-texts</a>
+        </li>
+        <li>
+            <a href="https://github.com/deptno/texts-fe">https://github.com/deptno/texts-fe</a>
+            deployed version ->
+            <mark><a href="https://texts.surge.sh">https://texts.surge.sh</a></mark>
+        </li>
+    </ul>
+</article>
+<hr/>
+<article class="row">
+    <h2 class="col-lg-12">example</h2>
     <hr/>
-    <article class="row">
-        <h2 class="col-md-12 col-sm-12">example</h2>
-        <hr/>
-        <pre class="col-md-6 col-sm-12">
+    <pre class="col-lg-6 col-md-12">
         <code class="html">
             &lt;h3 data-text-id=&quot;TEXTS_TR_TITLE&quot;&gt;
                 loading...
@@ -68,19 +68,18 @@
             &lt;span data-text-id=&quot;TEXTS_TR_DESCRIPTION&quot;/&gt;
         </code>
     </pre>
-        <div class="col-md-6 col-sm-12">
-            <h3 class="mt-20" data-text-id="TEXTS_TR_TITLE">
-                loading...
-                <small data-text-id="TEXTS_URL"></small>
-            </h3>
-            <span>TEXTS_TR_AUTHOR_EMAIL: </span>
-            <span data-text-id="TEXTS_TR_AUTHOR_EMAIL"/>
-            <br/>
-            <span>TEXTS_TR_DESCRIPTION: </span>
-            <span data-text-id="TEXTS_TR_DESCRIPTION"/>
-        </div>
-    </article>
-</div>
+    <div class="col-lg-6 col-md-12">
+        <h3 class="mt-20" data-text-id="TEXTS_TR_TITLE">
+            loading...
+            <small data-text-id="TEXTS_URL"></small>
+        </h3>
+        <span>TEXTS_TR_AUTHOR_EMAIL: </span>
+        <span data-text-id="TEXTS_TR_AUTHOR_EMAIL"/>
+        <br/>
+        <span>TEXTS_TR_DESCRIPTION: </span>
+        <span data-text-id="TEXTS_TR_DESCRIPTION"/>
+    </div>
+</article>
 <footer className="App-footer">
     author: <a href="mailto:deptno@gmail.com">deptno@gmail.com</a>
     (<a href="http://blog.bglee.me" target="_blank">bglee.me</a>)
