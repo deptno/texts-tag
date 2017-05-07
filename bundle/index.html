@@ -11,63 +11,84 @@
             padding-top: 5px;
             color: white;
         }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
     </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/darcula.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/dracula.css">
 </head>
 <body>
-<h1>texts-translator</h1>
-<article>
-    <h2>usage</h2>
-    add tag published html
-    <pre>
-        <code>
-        &lt;script&gt;
-            // data.fetching url
-            window.TEXTS_DATA_URL = '//1r8n4u8sqc.execute-api.ap-northeast-2.amazonaws.com/dev/texts/i18n';
-        &lt;/script&gt;
-        &lt;script src="//texts-translator.surge.sh/texts-translator.js" defer&gt;&lt;/script&gt;
-        </code>
-    </pre>
-    use in body
-    <pre>
-        <code>
-        &lt;div data-text-id="text_id_01"/&gt;
-        &lt;span data-text-id="text_id_02"/&gt;
-        &lt;prev data-text-id="text_id_03"/&gt;
-        </code>
-    </pre>
-</article>
-<article>
-    <h2>ref</h2>
-    <ul>
-        <li>
-            <a href="https://github.com/deptno/serverless-texts">https://github.com/deptno/serverless-texts</a>
-        </li>
-        <li>
-            <a href="https://github.com/deptno/texts-fe">https://github.com/deptno/texts-fe</a>
-            deployed version ->
-            <mark><a href="https://texts.surge.sh">https://texts.surge.sh</a></mark>
-        </li>
-    </ul>
-</article>
-<hr/>
-<article>
-    <h2>example</h2>
-    <h3 data-text-id="TEXTS_TR_TITLE">
-        loading...
-        <small data-text-id="TEXTS_URL"></small>
-    </h3>
-    <span>TEXTS_TR_AUTHOR_EMAIL: </span>
-    <span data-text-id="TEXTS_TR_AUTHOR_EMAIL"/>
+<div class="container">
+    <h1>texts-translator</h1>
     <br/>
-    <span>TEXTS_TR_DESCRIPTION: </span>
-    <span data-text-id="TEXTS_TR_DESCRIPTION"/>
-</article>
+    <article>
+        <h2>usage</h2>
+        add code below to body
+        <pre>
+        <code class="html">
+            &lt;script&gt;
+                // data.fetching url
+                window.TEXTS_DATA_URL = '//1r8n4u8sqc.execute-api.ap-northeast-2.amazonaws.com/dev/texts/i18n';
+            &lt;/script&gt;
+            &lt;script src="//texts-translator.surge.sh/texts-translator.js" defer&gt;&lt;/script&gt;
+        </code>
+    </pre>
+    </article>
+    <article>
+        <h2>ref</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/deptno/serverless-texts">https://github.com/deptno/serverless-texts</a>
+            </li>
+            <li>
+                <a href="https://github.com/deptno/texts-fe">https://github.com/deptno/texts-fe</a>
+                deployed version ->
+                <mark><a href="https://texts.surge.sh">https://texts.surge.sh</a></mark>
+            </li>
+        </ul>
+    </article>
+    <hr/>
+    <article class="row">
+        <h2 class="col-md-12 col-sm-12">example</h2>
+        <hr/>
+        <pre class="col-md-6 col-sm-12">
+        <code class="html">
+            &lt;h3 data-text-id=&quot;TEXTS_TR_TITLE&quot;&gt;
+                loading...
+                &lt;small data-text-id=&quot;TEXTS_URL&quot;&gt;&lt;/small&gt;
+            &lt;/h3&gt;
+            &lt;span&gt;TEXTS_TR_AUTHOR_EMAIL: &lt;/span&gt;
+            &lt;span data-text-id=&quot;TEXTS_TR_AUTHOR_EMAIL&quot;/&gt;
+            &lt;br/&gt;
+            &lt;span&gt;TEXTS_TR_DESCRIPTION: &lt;/span&gt;
+            &lt;span data-text-id=&quot;TEXTS_TR_DESCRIPTION&quot;/&gt;
+        </code>
+    </pre>
+        <div class="col-md-6 col-sm-12">
+            <h3 class="mt-20" data-text-id="TEXTS_TR_TITLE">
+                loading...
+                <small data-text-id="TEXTS_URL"></small>
+            </h3>
+            <span>TEXTS_TR_AUTHOR_EMAIL: </span>
+            <span data-text-id="TEXTS_TR_AUTHOR_EMAIL"/>
+            <br/>
+            <span>TEXTS_TR_DESCRIPTION: </span>
+            <span data-text-id="TEXTS_TR_DESCRIPTION"/>
+        </div>
+    </article>
+</div>
 <footer className="App-footer">
     author: <a href="mailto:deptno@gmail.com">deptno@gmail.com</a>
     (<a href="http://blog.bglee.me" target="_blank">bglee.me</a>)
 </footer>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 <script>
     window.TEXTS_DATA_URL = 'https://1r8n4u8sqc.execute-api.ap-northeast-2.amazonaws.com/dev/texts/i18n';
+    hljs.initHighlightingOnLoad();
 </script>
 <script src="//texts-translator.surge.sh/texts-translator.js"></script>
 </body>
