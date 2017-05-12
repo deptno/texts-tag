@@ -31,8 +31,10 @@
     <pre>
         <code class="html">
             &lt;script&gt;
-                // data.fetching url
-                window.TEXTS_DATA_URL = '//1r8n4u8sqc.execute-api.ap-northeast-2.amazonaws.com/dev/texts/i18n';
+                // your graph.cool endpoint & prefix to filter
+                const endpoint = 'https://api.graph.cool/simple/v1/cj2h6xd611xrp0174pjcmnmvh';
+                const prefix = 'TEXTS_';
+                window.TEXTS_DATA_URL = `https://wt-d71fe7bd72732c90d912b6d49c51e0d3-0.run.webtask.io/language?endpoint=${endpoint}&prefix=${prefix}`;
             &lt;/script&gt;
             &lt;script src="//texts-translator.surge.sh/texts-translator.js" defer&gt;&lt;/script&gt;
         </code>
@@ -42,7 +44,7 @@
     <h2>ref</h2>
     <ul>
         <li>
-            <a href="https://github.com/deptno/serverless-texts">https://github.com/deptno/serverless-texts</a>
+            <a href="https://github.com/deptno/serverless-texts">https://github.com/deptno/serverless-texts</a> - match with texts-fe(master)
         </li>
         <li>
             <a href="https://github.com/deptno/texts-fe">https://github.com/deptno/texts-fe</a>
@@ -78,6 +80,9 @@
         <br/>
         <span>TEXTS_TR_DESCRIPTION: </span>
         <span data-text-id="TEXTS_TR_DESCRIPTION"/>
+        <br/>
+        <span>TEXTS_TR_CODE:</span>
+        <pre><code data-text-id="TEXTS_TR_CODE"></code></pre>
     </div>
 </article>
 <footer className="App-footer">
@@ -86,7 +91,7 @@
 </footer>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 <script>
-    window.TEXTS_DATA_URL = 'https://1r8n4u8sqc.execute-api.ap-northeast-2.amazonaws.com/dev/texts/i18n';
+    window.TEXTS_DATA_URL = 'https://wt-d71fe7bd72732c90d912b6d49c51e0d3-0.run.webtask.io/language?endpoint=https://api.graph.cool/simple/v1/cj2h6xd611xrp0174pjcmnmvh&prefix=TEXTS_';
     hljs.initHighlightingOnLoad();
 </script>
 <script src="//texts-translator.surge.sh/texts-translator.js"></script>

@@ -12,7 +12,7 @@ import * as fetch from 'isomorphic-fetch';
 
             elements.forEach(element => {
                 const id = element.getAttribute('data-text-id');
-                const text = json.find(item => item.textId === id);
+                const {text} = json.find(item => item.textId === id);
 
                 if (element.hasChildNodes()) {
                     let node = element.firstChild;
