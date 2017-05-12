@@ -11,8 +11,8 @@ import * as fetch from 'isomorphic-fetch';
             const elements: Element[] = document.querySelectorAll('*[data-text-id]') as any;
 
             elements.forEach(element => {
-                const id = element.getAttribute(('data-text-id'));
-                const text = json[id];
+                const id = element.getAttribute('data-text-id');
+                const text = json.find(item => item.textId === id);
 
                 if (element.hasChildNodes()) {
                     let node = element.firstChild;
